@@ -14,7 +14,9 @@
         exit(1);                                                                \
     } while (0)
 
-#define UNUSED(x) (void)(x)
+#define UNUSED(x) (void)(x + 1)
+
+typedef int Errno;
 
 #define return_defer(value) \
     do {                    \
