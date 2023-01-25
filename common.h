@@ -14,6 +14,12 @@
         exit(1);                                                                \
     } while (0)
 
+#define UNREACHABLE(message)                                                      \
+    do {                                                                          \
+        fprintf(stderr, "%s:%d: UNREACHABLE: %s\n", __FILE__, __LINE__, message); \
+        exit(1);                                                                  \
+    } while (0)
+
 #define UNUSED(x) (void)(x + 1)
 
 typedef int Errno;
